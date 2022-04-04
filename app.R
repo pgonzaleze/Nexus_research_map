@@ -15,7 +15,7 @@ p_load("shiny", "shinydashboard", "leaflet",
 nexus_df <- read.csv(file = 'Ocean_Nexus_Projects_list.csv', 
                      sep = ',', skip = 1)
 
-# Define UI for application that draws a histogram
+# Define UI for application that draws a map
 ui <- fluidPage(theme = shinytheme("superhero"),
     titlePanel(p("Nippon Foundation Ocean Nexus Center at UW EarthLab -- Research Projects", style = "color:#3474A7")),
     mainPanel(width = 10, (
@@ -24,7 +24,7 @@ ui <- fluidPage(theme = shinytheme("superhero"),
     )
 )
 
-# Define server logic required to draw a histogram
+# Define server logic required to draw a map
 server <- function(input, output,server){
     output$map <- renderLeaflet({
         nexus_df%>%
