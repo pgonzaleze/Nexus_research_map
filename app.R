@@ -16,10 +16,10 @@ nexus_df <- read.csv(file = 'Ocean_Nexus_Projects_list.csv',
                      sep = ',', skip = 1)
 
 # Define UI for application that draws a histogram
-ui <- fluidPage(
+ui <- fluidPage(theme = shinytheme("superhero"),
     titlePanel(p("Nippon Foundation Ocean Nexus Center at UW EarthLab -- Research Projects", style = "color:#3474A7")),
-    mainPanel((
-        leafletOutput(outputId = "map")
+    mainPanel(width = 10, (
+        leafletOutput(outputId = "map") 
         )
     )
 )
@@ -29,22 +29,22 @@ server <- function(input, output,server){
     output$map <- renderLeaflet({
         nexus_df%>%
             leaflet(options = leafletOptions(minZoom = 1)) %>%
-            addProviderTiles(provider = "CartoDB")%>%
+            addProviderTiles(provider = "CartoDB") %>%
             setMaxBounds(lng1 = -179,
                          lat1 = -89,
                          lng2 = 179,
                          lat2 = 89) %>%
-            addProviderTiles(provider = "CartoDB")%>%
+            addProviderTiles(provider = "CartoDB") %>%
             addCircleMarkers(lng = jitter(nexus_df$lon, factor = 0.001),
                              lat = jitter(nexus_df$lat, factor = 0.001),
                              radius = 12, color = "blue",
                              popup = Text,
                              label = nexus_df$Title,
-                             clusterOptions = markerClusterOptions())%>%
+                             clusterOptions = markerClusterOptions()) %>%
             clearBounds()
         
     })
 }
 
 # Run the application 
-shinyApp(ui = ui, server = server) 
+shinyApp(ui = ui, server = server)
