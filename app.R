@@ -22,7 +22,8 @@ Text = paste0("<b>Title:</b> ", nexus_df$Title,
 
 # Define UI for application that draws a map
 ui <- fluidPage(theme = shinytheme("superhero"),
-    titlePanel(p("Nippon Foundation Ocean Nexus Center at UW EarthLab -- Research Projects", style = "color:#3474A7")),
+    titlePanel(h1("Nippon Foundation Ocean Nexus Center at UW EarthLab -- Research Projects", 
+                  style = "color:#3474A7", align = "center")),
     mainPanel(width = 10, (
         leafletOutput(outputId = "map") 
         )
