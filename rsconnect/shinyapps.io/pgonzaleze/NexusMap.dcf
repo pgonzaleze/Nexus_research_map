@@ -1,0 +1,13 @@
+name: NexusMap
+title: NexusMap
+username:
+account: pgonzaleze
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6014123
+bundleId: 5764825
+url: https://pgonzaleze.shinyapps.io/NexusMap/
+when: 1649120358.95924
+lastSyncTime: 1649120358.95924
+asMultiple: FALSE
+asStatic: FALSE
