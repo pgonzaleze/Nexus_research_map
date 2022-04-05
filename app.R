@@ -7,9 +7,15 @@
 #    http://shiny.rstudio.com/
 #
 
-library(pacman)
-p_load("shiny", "shinydashboard", "leaflet",
-       "tidyverse", "htmltools", "dplyr", "shinythemes")
+#library(pacman)
+#p_load("shiny", "shinydashboard", "leaflet",
+#       "tidyverse", "htmltools", "dplyr", "shinythemes")
+
+library("shiny")
+library("leaflet")
+library('htmltools')
+library('shinythemes')
+library('dplyr')
 
 #load dataframe
 nexus_df <- read.csv(file = "Ocean_Nexus_Projects_list.csv", 
