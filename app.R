@@ -14,6 +14,7 @@ p_load("shiny", "shinydashboard", "leaflet",
 #load dataframe
 nexus_df <- read.csv(file = "Ocean_Nexus_Projects_list.csv", 
                      sep = ',', skip = 1)
+
 Text = paste0("<b>Title:</b> ", nexus_df$Title,
               "<br>", "<b>PI:</b> ", nexus_df$PI.institution,
               "<br>", "<b>Research or Student Fellow / Research Associate:</b> ", nexus_df$Fellow,       
