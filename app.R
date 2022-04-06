@@ -33,6 +33,9 @@ ui <- fluidPage(theme = shinytheme("superhero"),
                   style = "color:#3474A7", align = "center")),
     sidebarLayout(
         sidebarPanel(
+            img(src = "https://www.nippon-foundation.or.jp/app/themes/tnf-2019/assets/images/common/logo-horizontal.png",
+                height = 50, width = 210, 
+                style="display: block; margin-left: auto; margin-right: auto;"),
             h3("Our Research"),
             h5("Ocean Nexus research brings 
               together expertise in social 
@@ -43,17 +46,14 @@ ui <- fluidPage(theme = shinytheme("superhero"),
               to oceans and impacts on the 
               communities that rely on them"),
             br(),
-            p("Instead of modeling for the future, 
+            h5("Instead of modeling for the future, 
               we address current issues with evidence 
               and identify equitable solutions 
               that can be immediately implemented 
-              for an equitable outcome. 
-              We focus our efforts on understanding and 
-              affecting the following eight areas of research:")
+              for an equitable outcome.")
         ),
         mainPanel(width = 8, (
-            leafletOutput(outputId = "map")),
-            img(src = "nippon_logo.png")
+            leafletOutput(outputId = "map"))
         )
     )
 )
