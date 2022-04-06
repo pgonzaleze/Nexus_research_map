@@ -31,8 +31,29 @@ Text = paste0("<b>Title:</b> ", nexus_df$Title,
 ui <- fluidPage(theme = shinytheme("superhero"),
     titlePanel(h1("Nippon Foundation Ocean Nexus Center at UW EarthLab -- Research Projects", 
                   style = "color:#3474A7", align = "center")),
-    mainPanel(width = 10, (
-        leafletOutput(outputId = "map") 
+    sidebarLayout(
+        sidebarPanel(
+            h3("Our Research"),
+            h5("Ocean Nexus research brings 
+              together expertise in social 
+              and natural sciences, from 
+              critical theory to policy analysis 
+              to equity and the environment, 
+              for a holistic study of changes 
+              to oceans and impacts on the 
+              communities that rely on them"),
+            br(),
+            p("Instead of modeling for the future, 
+              we address current issues with evidence 
+              and identify equitable solutions 
+              that can be immediately implemented 
+              for an equitable outcome. 
+              We focus our efforts on understanding and 
+              affecting the following eight areas of research:")
+        ),
+        mainPanel(width = 8, (
+            leafletOutput(outputId = "map")),
+            img(src = "nippon_logo.png")
         )
     )
 )
