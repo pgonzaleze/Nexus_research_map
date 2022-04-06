@@ -1,5 +1,7 @@
 ==== NEXUS RESEARCH'S INTERACTIVE MAP ====    
 
+<img src="https://www.nippon-foundation.or.jp/app/themes/tnf-2019/assets/images/common/logo-horizontal.png" width="220" height="70">
+
 # Nexus research map
 This repository host the "Nippon Foundation Ocean Nexus Center at UW EarthLab -- Research Projects" [interactive map](https://pgonzaleze.shinyapps.io/NexusMap/)
 
