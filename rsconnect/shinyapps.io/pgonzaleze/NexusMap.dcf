@@ -5,9 +5,9 @@ account: pgonzaleze
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6014123
-bundleId: 5768769
+bundleId: 5929093
 url: https://pgonzaleze.shinyapps.io/NexusMap/
-when: 1649215055.2107
-lastSyncTime: 1649215055.2107
+when: 1653104130.29904
+lastSyncTime: 1653104130.29904
 asMultiple: FALSE
 asStatic: FALSE
