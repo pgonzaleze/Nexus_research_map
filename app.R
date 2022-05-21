@@ -44,7 +44,7 @@ ui <- fluidPage(theme = shinytheme("superhero"),
               to equity and the environment, 
               for a holistic study of changes 
               to oceans and impacts on the 
-              communities that rely on them."),
+              communities that rely on them.."),
             br(),
             h5("Instead of modeling for the future, 
               we address current issues with evidence 
